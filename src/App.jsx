@@ -1,8 +1,29 @@
 
-import React from 'react'
+import React, { useState } from 'react'
+import {TodoProvider} from './contexts'
 
 function App() {
+  const [todos,setTodos]=useState([]);
+
+  const addTodo =(todo) =>{
+    setTodos((prev)=>[...todo,...prev])
+
+  }
+
+  const editTodo =(id,todo) =>{
+    setTodos((prev)=>prev.map((prevTodo)=>(prevTodo.id === id?todo:prevTodo)))
+  }
+
+  const deleteTodo =(id) =>{
+    setTodos((prev)=>(prev.filter((prevTodo)=>(prevTodo.id !== id))))
+    
+  } 
+  const toggleCheck =(id) =>{
+    setTodos((prev)=>(prev.map((prevTodo)=>(prevTodo.id === id ? {...prevTodo,completed:!(prevTodo.completed ):prevTodo)))
+  }
+
   return (
+    <TodoProvider value={{todos,addTodo,editTodo,deleteTodo,toggleCheck}}>
     <div className='bg-gradient-to-br from-[#c2112f] to-[#eb9ba9] min-h-screen py-8 '>
 
       <h1 className='font-bold text-2xl mx-auto text-lime-300 bg-[#ffffff25] max-w-fit rounded-lg p-3 border border-pink-300 shadow-lg'>CheckMate</h1>
@@ -20,6 +41,7 @@ function App() {
 
 
     </div>
+    </TodoProvider>
   )
 }
 

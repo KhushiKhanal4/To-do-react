@@ -5,7 +5,7 @@ export const TodoContext=createContext({
         {
             id:1,
             task:"input",
-            completed:false
+            completed:false,
         }   
     ],
     addTodo :(task)=>{},
@@ -16,9 +16,8 @@ export const TodoContext=createContext({
 })
 
 export const useTodo= ()=> {
-    return(
-        useContext(TodoContext)
-    )
+    return useContext(TodoContext)
+    
 }
 
 export const TodoProvider=TodoContext.Provider
