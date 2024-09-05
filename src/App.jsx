@@ -1,12 +1,13 @@
 
 import React, { useEffect, useState } from 'react'
 import {TodoProvider} from './contexts'
+import InputTodo from './components/InputTodo';
 
 function App() {
   const [todos,setTodos]=useState([]);
 
   const addTodo =(todo) =>{
-    setTodos((prev)=>[...todo,...prev])
+    setTodos((prev)=>[{...todo},...prev])
 
   }
 
@@ -49,6 +50,7 @@ function App() {
 
       <div>
         {/* To-do input field */}
+       <InputTodo/>
       </div>
 
       <div>
