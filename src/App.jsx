@@ -41,7 +41,7 @@ function App() {
 
   return (
     <TodoProvider value={{todos,addTodo,editTodo,deleteTodo,toggleCheck}}>
-    <div className='bg-gradient-to-br from-[#c2112f] to-[#eb9ba9] min-h-screen py-8 '>
+    <div className='bg-gradient-to-br from-[#ec3d5a] to-[#eb9ba9] min-h-screen py-8 '>
 
       <h1 className='font-bold text-2xl mx-auto text-lime-300 bg-[#ffffff25] max-w-fit rounded-lg p-3 border border-pink-300 shadow-lg'>CheckMate</h1>
 
@@ -51,6 +51,7 @@ function App() {
       <div>
         {/* To-do input field */}
        <InputTodo/>
+       
       </div>
 
       <div>
