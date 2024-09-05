@@ -15,13 +15,13 @@ function InputTodo() {
     }
 
   return (
-    <form onSubmit={add} >
+    <form onSubmit={add} className='flex justify-center'>
       <input 
       type="text"
       placeholder='Add your todos here...'
-      className='w-2/3 ml-10 px-2 py-1 bg-[#ffffff3f] rounded-s-md border border-pink-200 focus:outline-none focus:ring-lime-400 focus:ring-2 placeholder:text-lime-300 placeholder:font-medium shadow-xl'
+      className='w-[60%] px-2 py-1 bg-[#ffffff3f] rounded-s-md border border-pink-200 focus:outline-none focus:ring-lime-400 focus:ring-2 placeholder:text-lime-300 placeholder:font-medium shadow-xl md:w-1/2 lg:w-[40%] lg:py-2 lg:placeholder:text-xl'
       value={todo}
-      onChange={(e)=>set(e.target.value)}
+      onChange={(e)=>setTodo(e.target.value)}
        />
        <button 
        type='submit'
