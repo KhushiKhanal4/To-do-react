@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { TodoProvider } from './contexts'
 import InputTodo from './components/InputTodo';
+import Task from './components/Task';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -45,7 +46,7 @@ function App() {
 
         <h1 className='font-bold text-2xl mx-auto text-lime-300 bg-[#ffffff25] max-w-fit rounded-lg p-3 border border-pink-300 shadow-lg'>CheckMate</h1>
 
-        <img src="public\3d-render-checklist-alarm-clock-project-plan (1).png" alt=""
+        <img src="3d-render-checklist-alarm-clock-project-plan (1).png" alt=""
           className='drop-shadow-2xl w-72 mx-auto ' />
 
         <div>
@@ -54,11 +55,7 @@ function App() {
 
         </div>
 
-        <div>
-          {/* To-do task list */}
-        </div>
-
-
+       
       </div>
     </TodoProvider>
   )
