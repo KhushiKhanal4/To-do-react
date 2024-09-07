@@ -20,14 +20,14 @@ function Task({ todo }) {
   }
 
   return (
-    <div className={`mx-auto rounded-md p-1 my-4 w-[75%] flex justify-between items-center gap-2  border-pink-100 border-2  md:w-[57%] lg:w-[44%] ${todo.completed ? "bg-[#b8a0fabd]" : "bg-[#fca1b09a]"}`}
+    <div className={`mx-auto rounded-md p-1 my-4 w-[75%] flex justify-between items-center gap-2  border-pink-100 border-2  md:w-[57%] lg:w-[44%] ${todo.completed ? "bg-gradient-to-l from-[#69e1f3d2] to-[#f2d0fad3]" : "bg-gradient-to-l from-[#e8c5f3c5] to-[#dd92f0d3]"}`}
     >
       <input type="checkbox"
         className="mx-1 bg-red-100 border-red-300 rounded-sm text-[#ca4878d8] focus:ring-red-200 focus:ring-1" checked={todo.completed}
         onChange={check} />
 
       <input type="text"
-        className={`bg-transparent text-white font-semibold tracking-wider capitalize text-shadow-md outline-none focus:ring-0 focus:outline-none border-0 border-spacing-0 w-4/6 rounded-md cursor-pointer  md:w-9/12 lg:w-10/12 ${todo.completed ? "line-through" : ""} ${isEditable ? " outline-white  focus:ring-white focus:outline-white my-2" : "border-transparent"}`}
+        className={`bg-transparent text-[#05080a] font-semibold tracking-wider capitalize text-shadow-md outline-none focus:ring-0 focus:outline-none border-0 border-spacing-0 w-4/6 rounded-md cursor-pointer  md:w-9/12 lg:w-10/12 ${todo.completed ? "line-through" : ""} ${isEditable ? " outline-white  focus:ring-white focus:outline-white my-2" : "border-transparent"}`}
         value={content}
         onChange={(e) => setContent(e.target.value)}
         readOnly={!isEditable}

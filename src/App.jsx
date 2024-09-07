@@ -44,12 +44,12 @@ function App() {
 
   return (
     <TodoProvider value={{ todos, addTodo, editTodo, deleteTodo, toggleCheck }}>
-      <div className='bg-gradient-to-br from-[#ec3d5a] to-[#eb9ba9] min-h-screen py-8 '>
+      <div className='bg-gradient-to-br from-[#f17c8f] to-[#cc88dd] min-h-screen py-8 '>
 
-        <h1 className='font-bold text-2xl mx-auto text-[#fff7f7] bg-[#ffffff25] max-w-fit rounded-lg p-3 border border-pink-300 shadow-lg text-shadow-md'>CheckMate</h1>
+        <h1 className='font-bold text-2xl mx-auto text-[#050505d3] bg-[#ffffff94] max-w-fit rounded-lg p-3 border border-pink-300 shadow-lg text-shadow-md'>CheckMate</h1>
 
         <img src="checklist.png" alt=""
-          className='drop-shadow-2xl w-72 mx-auto ' />
+          className='drop-shadow-2xl text-shadow-lg w-72 mx-auto ' />
 
         <div>
           {/* To-do input field */}
