@@ -20,7 +20,7 @@ function Task({ todo }) {
   }
 
   return (
-    <div className={`mx-auto rounded-md p-1 my-4 w-[75%] flex justify-between items-center gap-2  border-pink-100 border-2  md:w-[57%] lg:w-[44%] ${todo.completed ? "bg-[#76d37e75]" : "bg-[#fca1b09a]"}`}
+    <div className={`mx-auto rounded-md p-1 my-4 w-[75%] flex justify-between items-center gap-2  border-pink-100 border-2  md:w-[57%] lg:w-[44%] ${todo.completed ? "bg-[#b8a0fabd]" : "bg-[#fca1b09a]"}`}
     >
       <input type="checkbox"
         className="mx-1 bg-red-100 border-red-300 rounded-sm text-[#ca4878d8] focus:ring-red-200 focus:ring-1" checked={todo.completed}
@@ -34,7 +34,7 @@ function Task({ todo }) {
       />
 
       <button
-        className='bg-lime-300 p-2 rounded-lg border border-lime-100 hover:bg-lime-400 '
+        className='bg-white p-2 rounded-lg border border-violet-200 hover:bg-violet-300 transition-all duration-200'
         onClick={() => {
           if (todo.completed) return
           if (isEditable) {
@@ -50,7 +50,7 @@ function Task({ todo }) {
         
       </button>
 
-      <button className='bg-lime-300 p-2 rounded-lg border border-lime-100 hover:bg-lime-400'
+      <button className='bg-white p-2 rounded-lg border border-violet-200 hover:bg-violet-300 transition-all duration-200'
       onClick={() => deleteTodo(todo.id)}>
         <RiDeleteBin5Fill />
       </button>

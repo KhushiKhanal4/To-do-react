@@ -21,7 +21,7 @@ function InputTodo() {
       <input
         type="text"
         placeholder='Add your todos here...'
-        className='w-[60%] px-2 py-1 bg-[#ffffff3f] rounded-s-md border border-pink-200 focus:outline-none focus:ring-lime-400 focus:ring-2 placeholder:text-white placeholder:font-medium placeholder:text-shadow-md shadow-xl md:w-1/2 lg:w-[40%] lg:py-2 lg:placeholder:text-xl inpu'
+        className='w-[60%] px-2 py-1 bg-[#ffffff3f] rounded-s-md border border-pink-200 outline-none focus:outline-none focus:ring-pink-300 focus:ring-2 placeholder:text-white placeholder:font-medium placeholder:text-shadow-md shadow-xl md:w-1/2 lg:w-[40%] lg:py-2 lg:placeholder:text-xl '
         required
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
@@ -29,7 +29,7 @@ function InputTodo() {
 
       <button
         type='submit'
-        className='px-2 py-1 bg-lime-300 border border-pink-200 rounded-e-md text-pink-500 font-bold shadow-xl hover:bg-lime-400 hover:text-pink-700 '
+        className='px-2 py-1 bg-white border-2 border-white rounded-e-md text-black font-bold shadow-xl hover:bg-violet-300  transition-all duration-200  hover:text-shadow-sm hover:border-white'
       >
         ADD
       </button>
