@@ -8,8 +8,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
-    setTodos((prev) => [{ ...todo }, ...prev])
-
+    setTodos((prev) => [{ ...todo },...prev])
   }
 
   const editTodo = (id, todo) => {
@@ -25,20 +24,23 @@ function App() {
   }
 
   useEffect(() => {
-    const todos = JSON.parse(localStorage.getItem("todos")) || [];
-
-    if (todos) {
-      setTodos(todos);
+    // Retrieve todos from localStorage and safely parse them
+    try {
+      const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
+      setTodos(savedTodos);
+    } catch (error) {
+      console.error("Failed to load todos from localStorage", error);
+      setTodos([]);
     }
-
-
-  }, [])
-
+  }, []);
+  
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos))
-
-  }, [todos])
-
+    if (todos.length > 0) {
+      // Only save to localStorage if there are todos to save
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+  }, [todos]);
+  
 
   return (
     <TodoProvider value={{ todos, addTodo, editTodo, deleteTodo, toggleCheck }}>
