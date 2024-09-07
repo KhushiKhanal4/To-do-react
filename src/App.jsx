@@ -54,8 +54,8 @@ function App() {
           <InputTodo />
 
         </div>
+        
 
-       
       </div>
     </TodoProvider>
   )
