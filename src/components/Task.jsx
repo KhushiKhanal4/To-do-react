@@ -20,7 +20,7 @@ function Task({ todo }) {
   }
 
   return (
-    <div className={`mx-auto rounded-md p-1 my-4 w-[75%] flex justify-between items-center gap-2   border-pink-100 border-2  md:w-[57%] lg:w-[44%] ${todo.completed ? "bg-[#76d37e75]" : "bg-[#fca1b09a]"}`}
+    <div className={`mx-auto rounded-md p-1 my-4 w-[75%] flex justify-between items-center gap-2  border-pink-100 border-2  md:w-[57%] lg:w-[44%] ${todo.completed ? "bg-[#76d37e75]" : "bg-[#fca1b09a]"}`}
     >
       <input type="checkbox"
         className="mx-1 bg-red-100 border-red-300 rounded-sm text-[#ca4878d8] focus:ring-red-200 focus:ring-1" checked={todo.completed}
