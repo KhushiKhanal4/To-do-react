@@ -54,9 +54,17 @@ function App() {
           <InputTodo />
 
         </div>
-        
+         <div>
+          {todos.map((todo)=>(
+            <div key={todo.id}>
+              <Task todo={todo}/>
+            </div>
 
-      </div>
+          ))}
+         </div>
+       </div> 
+
+      
     </TodoProvider>
   )
 }
