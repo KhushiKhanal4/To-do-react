@@ -2,7 +2,7 @@ import React from 'react'
 import { BiSolidEditAlt } from "react-icons/bi";
 import { IoSaveSharp } from "react-icons/io5";
 import { RiDeleteBin5Fill } from "react-icons/ri";
-import { useTodo } from '../contexts';
+import { useTodo } from '../contexts/TodoContext';
 import { useState } from 'react';
 
 function Task({ todo }) {
@@ -38,7 +38,7 @@ function Task({ todo }) {
         onClick={() => {
           if (todo.completed) return
           if (isEditable) {
-            editTodo();
+            edit();
           }
           else setIsEditable((prev) => (!prev))
           }
