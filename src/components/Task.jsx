@@ -27,7 +27,7 @@ function Task({ todo }) {
         onChange={check} />
 
       <input type="text"
-        className={`bg-transparent text-[#05080a] font-semibold tracking-wider capitalize text-shadow-md outline-none focus:ring-0 focus:outline-none border-0 border-spacing-0 w-4/6 rounded-md cursor-pointer  md:w-9/12 lg:w-10/12 ${todo.completed ? "line-through" : ""} ${isEditable ? " outline-white  focus:ring-white focus:outline-white my-2" : "border-transparent"}`}
+        className={`bg-transparent text-white font-semibold tracking-wider capitalize text-shadow-md outline-none focus:ring-0 focus:outline-none border-0 border-spacing-0 w-4/6 rounded-md cursor-pointer  md:w-9/12 lg:w-10/12 ${todo.completed ? "line-through" : ""} ${isEditable ? " outline-white  focus:ring-white focus:outline-white my-2" : "border-transparent"}`}
         value={content}
         onChange={(e) => setContent(e.target.value)}
         readOnly={!isEditable}

@@ -58,16 +58,15 @@ function App() {
   return (
     <TodoProvider value={{ todos, addTodo, editTodo, deleteTodo, toggleCheck }}> {/* Provide todos and functions to children */}
       <div className='bg-gradient-to-br from-[#f17c8f] to-[#cc88dd] min-h-screen py-8 '>
-        <h1 className='font-bold text-2xl mx-auto text-[#ffffffd3] bg-[#ff70705d] max-w-fit rounded-lg p-3 border border-pink-300 shadow-lg text-shadow-md'>CheckMate</h1> {/* Title */}
+        <h1 className='font-bold text-2xl mx-auto text-white bg-[#fa91915d] max-w-fit rounded-lg p-3 border border-pink-300 shadow-lg text-shadow-md'>CheckMate</h1> {/* Title */}
 
-        <img src="3d-render-checklist-alarm-clock-project-plan (1).png" alt="" className='drop-shadow-2xl text-shadow-lg w-72 mx-auto ' /> 
+        <img src="checklist.png" alt="" className='drop-shadow-2xl text-shadow-lg w-72 mx-auto ' /> 
 
         <div>
           {/* To-do input field */}
           <InputTodo />
 
         </div>
-
          <div>
           {todos.map((todo)=>(
             <div key={todo.id}>
@@ -75,9 +74,7 @@ function App() {
             </div>
 
           ))}
-
          </div>
-
        </div> 
 
       
@@ -87,8 +84,3 @@ function App() {
 
 export default App
 
-
-
-
-
-  
