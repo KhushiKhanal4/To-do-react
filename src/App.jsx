@@ -9,10 +9,11 @@ function App() {
   const [todos, setTodos] = useState([]); // State to manage the list of todos
 
   // Function to add a new todo
+  // Add the new todo to the state,here the previous values access is taken and the new todos are added without the loss of previous todos
+  // ...todo and ...prev is the spread operator of javascript that is used to maintain immutability it creates the copy of the object and spreads it
   const addTodo = (todo) => {
-    setTodos((prev) => [{ ...todo }, ...prev]); 
-    // Add the new todo to the state,here the previous values access is taken and the new todos are added without the loss of previous todos
-    // ...todo and ...prev is the spread operator of javascript that is used to maintain immutability it creates the copy of the object and spreads it
+    setTodos((prev) => [{ ...todo }, ...prev]);
+
   }
 
   // Function to edit an existing todo
@@ -44,7 +45,7 @@ function App() {
       setTodos([]);
     }
   }, []);
-  
+
   useEffect(() => {
     if (todos && todos.length > 0) {
       // Only save to localStorage if there are todos to save
@@ -53,31 +54,31 @@ function App() {
       //setItem to store data
     }
   }, [todos]);
-  
+
 
   return (
     <TodoProvider value={{ todos, addTodo, editTodo, deleteTodo, toggleCheck }}> {/* Provide todos and functions to children */}
       <div className='bg-gradient-to-br from-[#f17c8f] to-[#cc88dd] min-h-screen py-8 '>
-        <h1 className='font-bold text-2xl mx-auto text-white bg-[#fa91915d] max-w-fit rounded-lg p-3 border border-pink-300 shadow-lg text-shadow-md'>CheckMate</h1> {/* Title */}
+        <h1 className='font-bold text-2xl mx-auto text-white bg-[#ffffff1f] max-w-fit rounded-lg p-3 border border-pink-300 shadow-lg text-shadow-md'>CheckMate</h1> {/* Title */}
 
-        <img src="checklist.png" alt="" className='drop-shadow-2xl text-shadow-lg w-72 mx-auto ' /> 
+        <img src="checklist.png" alt="" className='drop-shadow-2xl text-shadow-lg w-72 mx-auto ' />
 
         <div>
           {/* To-do input field */}
           <InputTodo />
 
         </div>
-         <div>
-          {todos.map((todo)=>(
+        <div>
+          {todos.map((todo) => (
             <div key={todo.id}>
-              <Task todo={todo}/>
+              <Task todo={todo} />
             </div>
 
           ))}
-         </div>
-       </div> 
+        </div>
+      </div>
 
-      
+
     </TodoProvider>
   )
 }

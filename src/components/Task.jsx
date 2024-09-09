@@ -31,7 +31,7 @@ function Task({ todo }) {//prop todo
       <input type="checkbox"
         className="mx-1 bg-red-100 border-red-300 rounded-sm text-[#ca4878d8] focus:ring-red-200 focus:ring-1 cursor-pointer" 
         checked={todo.completed}
-        onChange={check()} // Toggles the 'completed' state
+        onChange={check} // Toggles the 'completed' state
       />
 
       {/* Task content that can be either read-only or editable */}
